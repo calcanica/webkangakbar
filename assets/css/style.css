@@ -84,11 +84,12 @@ body {
 .konten_beranda img {
     width: 900px;
     position: absolute;
-    top: -230px;
-    left: 550px;
+    top: 10px;
+    left: 650px;
     opacity: 0;
     animation: geserKiri 1s ease forwards;
     animation-delay: 2.5s;
+    border-radius: 20px;
 }
 
 .konten_beranda h3 {
@@ -188,7 +189,7 @@ body {
     max-width: 680px;
     height: auto;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 
 .teks h2 {
@@ -369,15 +370,15 @@ section {
 }
 
 .kemajuan.html span {
-    width: 70%;
+    width: 99%;
 }
 
 .kemajuan.css span {
-    width: 50%;
+    width: 93%;
 }
 
 .kemajuan.javascript span {
-    width: 10%;
+    width: 100%;
 }
 
 .kemajuan.php span {
@@ -407,36 +408,36 @@ section {
     color: white;
     font-size: 12px;
     border-radius: 3px;
-    top: -28px;
-    right: -20px;
+    top: 120%;
+    right: -15%;
     animation: teksMuncul .5s 1.5s linear forwards;
     opacity: 0;
 }
 
 .kemajuan.html span::after {
-    content: "70%";
+    content: "99%";
 }
 
 .kemajuan.css span::after {
-    content: "50%";
+    content: "93%";
 
 }
 
 .kemajuan.javascript span::after {
-    content: "10%";
+    content: "100%";
 
 }
 
 .kemajuan.php span::after {
-    content: "0%";
+    content: "20%";
 }
 
 .kemajuan.react span::after {
-    content: "0%";
+    content: "12%";
 
 }
 
-.kemajuan.nodejs span::after {
+/* .kemajuan.nodejs span::after {
     content: "0%";
 }
 
@@ -445,7 +446,7 @@ section {
 }
 
 .kemajuan.expressjs span::after {
-    content: "0%";
+    content: "0%"; */
 }
 
 .kemajuan span::before {
@@ -486,7 +487,13 @@ section {
     height: 160px;
 }
 
-.radial .bar_radial .kemajuan2 {
+.kemajuan2 {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 15;
+}
+
+.radial .bar_radial {
     stroke-width: 10;
     stroke: black;
     fill: transparent;
@@ -496,29 +503,56 @@ section {
     animation: barGerak 1s linear forwards;
 }
 
+
 .lokasi {
-    stroke-width: 10;
-    stroke: var(--warna2);
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
+    fill: none;
+    stroke-width: 15;
     stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502; /* default, akan ditimpa sesuai persen */
+    animation: isiBar 1s ease-out forwards;
 }
 
 .radial-1 {
-    animation: animasiRadial1 1s 1s linear forwards;
+    stroke: #ff4d4f;
+    animation-delay: 0.2s;
+    animation-name: isiBar-83;
 }
-
 .radial-2 {
-    animation: animasiRadial2 1s 1s linear forwards;
+    stroke: #faad14;
+    animation-delay: 0.4s;
+    animation-name: isiBar-77;
 }
-
 .radial-3 {
-    animation: animasiRadial3 1s 1s linear forwards;
+    stroke: #52c41a;
+    animation-delay: 0.6s;
+    animation-name: isiBar-90;
+}
+.radial-4 {
+    stroke: #1890ff;
+    animation-delay: 0.8s;
+    animation-name: isiBar-80;
 }
 
-.radial-4 {
-    animation: animasiRadial4 1s 1s linear forwards;
+/* Animasi untuk masing-masing persen */
+@keyframes isiBar-4 {
+    to { stroke-dashoffset: calc(502 - 0.046 * 502); }
+}
+@keyframes isiBar-77 {
+    to { stroke-dashoffset: calc(502 - 0.77 * 502); }
+}
+@keyframes isiBar-90 {
+    to { stroke-dashoffset: calc(502 - 0.9 * 502); }
+}
+@keyframes isiBar-80 {
+    to { stroke-dashoffset: calc(502 - 0.8 * 502); }
+}
+@keyframes isiBar-83 {
+    to {
+        stroke-dashoffset: calc(502 - 0.835 * 502); /* 83.5% */
+    }
 }
 
 .bar_radial .persentase {
@@ -549,8 +583,8 @@ section {
 
 /* ==========MENGHIAS BAGIAN PROJEK DIMULAI========== */
 .teks_utama {
-    padding-top: 130px;
-    margin-top: 200px;
+    padding-top: 100px;
+    margin-top: 100px;
 }
 
 .teks_utama h2 {

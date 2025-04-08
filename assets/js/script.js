@@ -1,5 +1,5 @@
 let typed = new Typed(".teks", {
-  strings: ["Sedang Belajar JavaScript", "Developer Pemula"],
+  strings: ["Part Montor Baru", "Lampu Tanpa Ragu"],
   typeSpeed: 60,
   backSpeed: 60,
   backDelay: 1000,
